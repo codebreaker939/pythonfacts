@@ -5,6 +5,156 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Fun Facts</title>
     <style>
+        /* Previous CSS remains the same */
+        .fact-card {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.2s ease;
+            background-size: cover;
+            background-position: center;
+            background-blend-mode: overlay;
+            min-height: 200px;
+            color: white;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+            position: relative;
+            z-index: 1;
+        }
+
+        .fact-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 8px;
+            z-index: -1;
+        }
+
+        .category-badge {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .fact-text {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- Previous HTML structure remains the same -->
+    <script>
+        const aiFacts = {
+            "ai_fun_facts": [
+                // Previous facts remain...
+                  {
+                    "id": 1,
+                    "fact": "The term 'Artificial Intelligence' was first coined by John McCarthy in 1956 at the Dartmouth Conference.",
+                    "category": "history"
+                },
+                {
+                    "id": 2,
+                    "fact": "The first AI program to beat a world chess champion was IBM's Deep Blue, which defeated Garry Kasparov in 1997.",
+                    "category": "achievements"
+                },
+                {
+                    "id": 3,
+                    "fact": "The Turing Test, proposed by Alan Turing in 1950, is still used today to evaluate a machine's ability to exhibit intelligent behavior.",
+                    "category": "concepts"
+                },
+                {
+                    "id": 4,
+                    "fact": "AI can now compose music, create art, and write poetry, showcasing its capabilities in creative tasks.",
+                    "category": "capabilities"
+                },
+                {
+                    "id": 5,
+                    "fact": "The first AI chatbot, ELIZA, was created in 1966 and simulated a psychotherapist.",
+                    "category": "history"
+                },
+                {
+                    "id": 6,
+                    "fact": "AI systems process and analyze about 2.5 quintillion bytes of data every day.",
+                    "category": "statistics"
+                },
+                {
+                    "id": 7,
+                    "fact": "The AI market is predicted to reach $190 billion by 2025.",
+                    "category": "economics"
+                },
+                {
+                    "id": 8,
+                    "fact": "AI algorithms can now detect diseases like cancer with accuracy comparable to human doctors.",
+                    "category": "healthcare"
+                },
+                {
+                    "id": 9,
+                    "fact": "OpenAI's GPT-3 language model has 175 billion parameters.",
+                    "category": "technology"
+                },
+                {
+                    "id": 10,
+                    "fact": "AI-powered autonomous vehicles process about 1 gigabyte of data per second.",
+                    "category": "technology"
+                }
+                {
+                    "id": 11,
+                    "fact": "Python was the most popular language for AI development in 2023, used in over 70% of AI projects.",
+                    "category": "technology",
+                    "background": "url('https://images.unsplash.com/photo-1526379095098-d400fd0bf935')"
+                },
+                {
+                    "id": 12,
+                    "fact": "TensorFlow, a Python library, is used by over 2.5 million developers for AI and machine learning.",
+                    "category": "technology",
+                    "background": "url('https://images.unsplash.com/photo-1555949963-aa79dcee981c')"
+                },
+                {
+                    "id": 13,
+                    "fact": "PyTorch, developed by Facebook's AI Research lab, has seen a 300% growth in adoption since 2020.",
+                    "category": "statistics",
+                    "background": "url('https://images.unsplash.com/photo-1518432031352-d6fc5c10da5a')"
+                },
+                {
+                    "id": 14,
+                    "fact": "scikit-learn, Python's ML library, is used in over 80% of data science projects worldwide.",
+                    "category": "technology",
+                    "background": "url('https://images.unsplash.com/photo-1527430253228-e93688616381')"
+                },
+                {
+                    "id": 15,
+                    "fact": "Python's NumPy library processes over 1 million arrays per second in AI applications.",
+                    "category": "statistics",
+                    "background": "url('https://images.unsplash.com/photo-1527474305487-b87b222841cc')"
+                }
+            ]
+        };
+
+        function createFactCard(fact) {
+            const card = document.createElement('div');
+            card.className = 'fact-card';
+            card.style.backgroundImage = fact.background || "url('https://images.unsplash.com/photo-1515879218367-8466d910aaa4')";
+            card.innerHTML = `
+                <div class="category-badge">${fact.category}</div>
+                <p class="fact-text">${fact.fact}</p>
+            `;
+            return card;
+        }
+
+        // Previous JavaScript functions remain the same
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Fun Facts</title>
+    <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
