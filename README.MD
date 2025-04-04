@@ -1,7 +1,7 @@
 
 ## Installation
 
-1. Clone this repository or download the files ..
+1. Clone this repository or download the files ...
 2. No additional dependencies are required
 3. Open `index.html` in a web browser to run the application
 
